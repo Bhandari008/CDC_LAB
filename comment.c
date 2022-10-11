@@ -11,20 +11,23 @@ int main() {
 	if(comment[0] == '/')
 	{
 		if (comment[1] == '/')
-			printf("It is a comment");
-		
+			printf("\nIt is a comment");
 		else if(comment[1] == '*')
 		{
 			for(i=2;i<=length;i++)
 			{
-				if(comment[i] == '*' && comment[i+1] == '/')
+				if(comment[i] == '*' && comment[i+1]== '/')
 				{
+					printf("It is a comment.\n");
 					a = 1;	
 					break;
+					
 				}
 				else
 					continue;	
 			}
+			if(a==0)
+				printf("It is not a comment.");
 		}
 		else
 			printf("\n It is not a comment");			
